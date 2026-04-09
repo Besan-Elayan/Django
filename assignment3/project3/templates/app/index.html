@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+
+<form action="/result/" method="POST">
+    {% csrf_token %}
+
+    <label>Your Name:</label>
+    <input type="text" name="name"><br>
+
+    <label>Dojo location:</label>
+    <select name="location">
+        <option>San Jode</option>
+        <option>san</option>
+    </select><br>
+
+    <label>Favorit language:</label>
+    <select name="language">
+        <option>Python</option>
+        <option> Javascript</option>
+        <option> css</option>
+    </select><br>
+
+    <label>Comment (optional):</label>
+    <textarea name="comment"></textarea><br>
+
+    <button type="submit">button</button>
+</form>

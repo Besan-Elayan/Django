@@ -1,0 +1,39 @@
+<h2>Your Gold:</h2>
+
+<form action='/process_money/' method="POST">
+    {% csrf_token %}
+    <input type="hidden"  value="farm">
+    <h3>Farm (earns 10-20 gold)</h3>
+    <button>Find Gold</button>
+</form>
+
+<form action='/process_money/' method="POST">
+    {% csrf_token %}
+    <input type="hidden"  value="cave">
+    <h3>Cave (earns 10-20 gold)</h3>
+    <button>Find Gold</button>
+</form>
+
+<form action='/process_money/' method="POST">
+    {% csrf_token %}
+    <input type="hidden"  value="house">
+    <h3>House (earns 10-20 gold)</h3>
+    <button>Find Gold</button>
+</form>
+
+<form action='/process_money/' method="POST">
+    {% csrf_token %}
+    <input type="hidden"   value="quest">
+    <h3>Quest (earns/takes 0-50 gold)</h3>
+    <button>Find Gold</button>
+</form>
+
+<hr>
+
+<h3>Activities:</h3>
+
+<div>
+    {% for activity in activities %}
+        <p>{{ activity }}</p>
+    {% endfor %}
+</div>
